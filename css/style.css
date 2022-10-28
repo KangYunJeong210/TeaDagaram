@@ -342,7 +342,7 @@ body {
    } 
 
 
-.brand_story_inner2 ul li::before, .brand_story_inner2 ul li::after{
+.brand_story_inner2 ul li a::before, .brand_story_inner2 ul li a::after{
 	content:' ';
 	position:absolute;
 	top:50%;
@@ -352,14 +352,14 @@ body {
 	transform:translate(-50%,-50%);
 	transition:all 0.8s;} 
 
-    .brand_story_inner2 ul li::before{border-top:2px solid #fff;border-bottom:2px solid #fff;
+    .brand_story_inner2 ul li a::before{border-top:2px solid #fff;border-bottom:2px solid #fff;
 width:0;}
-.brand_story_inner2 ul li::after{border-left:2px solid #fff;border-right:2px solid #fff;
+.brand_story_inner2 ul li a::after{border-left:2px solid #fff;border-right:2px solid #fff;
 height:0;}
 
 .brand_story_inner2 ul li:hover span.text{display:block;}
-.brand_story_inner2 ul li:hover::before{width:95%;}
-.brand_story_inner2 ul li:hover::after{height:95%;} 
+.brand_story_inner2 ul li:hover a::before{width:95%;}
+.brand_story_inner2 ul li:hover a::after{height:95%;} 
 
 
 .brand_story_inner2 ul li img{
