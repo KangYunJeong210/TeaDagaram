@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1450">
+    <title>다가람</title>
+
+    <link rel="stylesheet" href="./css/style_sub4.css">
+    <link rel="shortcut icon" href="./images/main/DAGARAM_logo_only.png">
+
+
+    
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+
+    <!--탭 제이쿼리-->
+  <script type="text/javascript">
+  $(document).ready(function () {
+
+      //처음들어갔을때 모습 만들기...
+      $(".tab_content").hide(); //tab_content 부분을 모두 숨김.
+      $("ul.tabs li:first").addClass("active").show(); //첫번째 탭이 active클래스를 붙이고, 보여줌.
+      $(".tab_content:first").show(); //tab_contents중 첫번째꺼를 보여줌
+
+      //On Click Event
+      $("ul.tabs li").click(function () {
+
+          $("ul.tabs li").removeClass("active"); //Remove any "active" class
+          $(this).addClass("active"); //선택한 탭에만 active클래스 붙임
+          $(".tab_content").hide(); //모든 contents들 숨김
+
+          var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+          /*.attr( attributeName ) -> 선택한 요소의 속성의 값을 가져옵니다.
+          .find()는 어떤 요소의 하위 요소 중 특정 요소를 찾을 때 사용합니다.*/
+          $(activeTab).fadeIn(); //Fade in the active ID content(active되어있는 칸의 id 값을 가진 부분이 나타남)
+          return false;
+      });
+
+  });
+</script>
+
+<!--공지-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+</script>
+
+<script>
+$(function () {
+  $(".coupon").click(function () {
+    $(".popup").fadeIn();
+  });
+  $(".popup p a").click(function () {
+    $(".popup").fadeOut();
+  });
+});
+</script>
+<!--공지-->
+
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+  
+
+
+
+</head>
+<body>
+
+  <div id="gnb">
+    <!--배경색-->
+    <div class="gnb_margin">
+    <div id="gnb_inner">
+        <div class="right_list">
+            <ul class="R_list">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+
+        </div><!--right_list-->
+
+        <div class="logo"><a href="./index.html">
+            <img src="./images/sub4/Dagaram_Logo.png" alt=""></a>
+        </div>
+      <!--마진오토-->
+      <ul id="Header_list" class="clearfix">
+        <li>
+          <a href="sub2.html"> 제품 </a>
+          <ul class="sub">
+            <li><a href="./sub2.html#Pro_container">차</a></li>
+            <li><a href="./sub2.html#goods">굿즈</a></li>
+            <li><a href="./sub2.html#Daily_dagaram">데일리 다가람</a></li>
+          </ul>
+        </li>
+
+        <li><a href="sub1.html">브랜드</a>
+            <ul class="sub">
+                <li><a href="sub1.html#Story">다가람 이야기</a></li>
+                <li><a href="sub1.html#Brand_con">브랜드 콘셉트</a></li>
+                <li><a href="sub1.html#Make_story">만드는 이야기</a></li>
+              </ul></li>
+
+        <li><a href="sub3.html">매장</a>
+          <ul class="sub">
+            <li><a href="sub3.html#Tea_museum">티뮤지엄</a></li>
+            <li><a href="sub3.html#Offline">카페 다가람</a></li>
+            <li><a href="sub3.html#Coffee_show">카페쇼</a></li>
+          </ul>
+        </li>
+
+        <li><a href="sub4.html">커뮤니티</a>
+            <ul class="sub">
+                <li><a href="sub4.html#Notice">공지사항</a></li>
+                <li><a href="sub4.html# Event">이벤트</a></li>
+                <li><a href="sub4.html#Recipe_back">레시피</a></li>
+              </ul></li>
+
+      </ul>
+    </div>
+    <!--gnb_inner-->
+    </div><!--gnb_margin-->
+  </div>
+  <!--gnb-->
+
+
+    
+      <div id="Main_banner">
+        <div class="Main_title">
+        <h1>DAGARAM COMMUNITY</h1>
+        </div><!--Main_title-->
+
+        <div class="Main_inner_con">
+        <div class="Main_inner1">
+          <p>다가람의 여러가지 소식들을 만나보세요.<br>
+            공지사항, 놓쳐서는 안될 이벤트,<br>
+            다른 이용자분들이 공유해준 다양한 응용 레시피를<br>
+            천천히 읽어보세요.
+          </p>
+        </div><!--Main_inner1-->
+        <div class="Main_inner2">
+
+        </div><!--Main_inner2-->
+       
+        <div class="Main_btn">
+          <a href="sub3.html#Event">
+              이벤트 바로가기
+          </a>
+      </div><!--Main_btn-->
+
+      </div><!--Main_inner_con-->
+      </div><!--Main_banner-->
+
+
+
+
+
+
+
+
+      <div id="Notice">
+        
+        <div class="Notice_inner">
+          <h1>NOTICE</h1>
+        <ul>
+          <li><a href="#none" class="coupon">
+            <p>10월 데일리 다가람 배송 지연 안내</p> <p>22.10.03</p>
+          </a></li>
+          <li><a href="#">
+            <p>환불/교환/반품 전 필독사항입니다.</p> <p>22.09.28</p>
+          </a></li>
+          <li><a href="#">
+            <p>2022 11월 카페쇼 다가람 참여 일정</p> <p>22.09.20</p>
+          </a></li>
+        </ul>
+      </div><!--Notice_inner-->
+      </div><!--Notice-->
+
+        <div class="popup">
+        <img src="./images/sub4/Notice_popup.png" alt="팝업이미지">
+        <p><a href="./sub4.html#Notice">Close</a></p>
+       </div>
+
+
+
+
+
+      <div id="Event">
+        <div class="Event_inner">
+          <h1>EVENT</h1>
+          <ul>
+            <li><img src="./images/sub4/Event1.jpg" alt=""  data-aos="fade-right">
+            <p data-aos="fade-left">
+              <span>10월 포토리뷰 이벤트</span> <br>
+              1만원 이상 구매 후 포토리뷰를 <br>
+              작성해주시면 구매금액의 5%의 포인트를 돌려드려요</p></li>
+            <li><img src="./images/sub4/Event2.jpg" alt="" data-aos="fade-right">
+            <p data-aos="fade-left"> <span>
+              티 뮤지엄 방문 20% 이벤트</span> <br>
+              티 뮤지엄 방문이 처음이시라면 <br>
+              20% 할인이 적용된 가격으로 예약해보세요
+            </p></li>
+            <li><img src="./images/sub4/Event3.jpg" alt="" data-aos="fade-right">
+              <p data-aos="fade-left">
+                <span>가을맞이 BIG 할인 이벤트 <br>
+              </span> 파격적인 가을맞이 할인 이벤트로 <br>
+              환절기의 가족건강을 책임질 차를 만나보세요
+              </p>
+            </li>
+          </ul>
+        </div><!--Event_inner-->
+      </div><!--Event-->
+
+      <script>
+        AOS.init();
+    </script>
+    
+
+      <div id="Recipe_back">
+
+        <div class="Recipe_title">
+            <h1>Recipe</h1>
+
+
+        </div><!--Recipe_back-->
+
+      <div id="wrapper">
+
+
+        <!--탭 콘텐츠 영역 -->
+        <div class="tab_container">
+    
+              <!--탭 메뉴 영역 -->
+                <ul class="tabs">
+                    <li><a href="#tab1">녹차라떼
+                    </a></li>
+                    <li><a href="#tab2">호박식혜
+                    </a></li>
+                    <li><a href="#tab3">유자샐러드
+                    </a></li>
+                    <li><a href="#tab4">말차파운드
+                    </a></li>
+                    <li><a href="#tab5">수정과에이드
+                    </a></li>
+                </ul>
+    
+            <div id="tab1" class="tab_content">
+    
+    
+                   <div class="tab_1">
+                        <div class="tab1_box1">
+                           <img src="./images/sub4/Recipe_1.png" alt="">
+                        </div><!--tab1_box1-->
+                        <div class="tab1_box2">
+                          <img src="./images/sub4/Recipe_1-2.jpg" alt="">
+                        </div><!--tab1_box2-->
+                   </div><!--tab_1-->
+                
+            </div><!--tab_content-->
+    
+            <div id="tab2" class="tab_content">
+                   <div class="tab_1">
+                    <div class="tab1_box1">
+                      <img src="./images/sub4/Recipe_2.jpg" alt="">
+                   </div><!--tab1_box1-->
+                   <div class="tab1_box2">
+                     <img src="./images/sub4/Recipe_2-2.jpg" alt="">
+                   </div><!--tab1_box2-->
+                   </div><!--tab_1-->
+            </div><!--tab_content-->
+            
+            <div id="tab3" class="tab_content">
+    
+    
+                   <div class="tab_1">
+                    <div class="tab1_box1">
+                      <img src="./images/sub4/Recipe_3.jpg" alt="">
+                   </div><!--tab1_box1-->
+                   <div class="tab1_box2">
+                     <img src="./images/sub4/Recipe_3-2.jpg" alt="">
+                   </div><!--tab1_box2-->
+                   </div><!--tab_1-->
+            </div><!--tab_content-->
+    
+            <div id="tab4" class="tab_content">
+    
+                   <div class="tab_1">
+                    <div class="tab1_box1">
+                      <img src="./images/sub4/Recipe_4.jpg" alt="">
+                   </div><!--tab1_box1-->
+                   <div class="tab1_box2">
+                     <img src="./images/sub4/Recipe_4-2.jpg" alt="">
+                   </div><!--tab1_box2-->
+                   </div><!--tab_1-->
+            </div><!--tab_content-->
+            
+            
+            <div id="tab5" class="tab_content">
+              <div class="tab_1">
+                <div class="tab1_box1">
+                  <img src="./images/sub4/Recipe_5.jpg" alt="">
+               </div><!--tab1_box1-->
+               <div class="tab1_box2">
+                 <img src="./images/sub4/Recipe_5-2.jpg" alt="">
+               </div><!--tab1_box2-->
+               </div><!--tab_1-->
+        </div><!--tab_container-->
+              
+    </div><!--wrapper-->
+
+    <div class="Recipe_text">
+      인스타그램에 #다가람 #다가람레시피 #이벤트참여 태그와 함께 완성작 사진을 <br>
+      업로드해주시면 매달 추첨을 통해 제품을 보내드립니다. 
+
+    </div><!--Recipe_text-->
+  </div><!--Recipe_back-->
+
+
+  <div id="footer">
+    <!--배경색-->
+        <div class="footer_inner clearfix">
+        <!--마진오토-->
+            <div class="footer_left">
+                <img src="./images/main/Dagaram_logo_sub_green.png" alt="">
+                <ul>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보취급방침</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">문의하기</a></li>
+                    <li><a href="#">맴버십카드등록</a></li>
+                </ul>
+                <p>
+                    부산광역시 중앙동 중앙대로 다원빌딩 10층 (주)다가람 / 대표전화 : 080-022-0085<br>
+                    사업자등록번호 : 315-81-08930 / 대표자 : 강윤정 <br>
+                    COPYRIGHT ⓒ PULMUONE. All RIGHT RESERVED.
+                </p>
+            </div><!--footer_left-->
+            <div class="footer_right">
+                <ul>
+                    <li><a href="#"><img src="./images/main/icon_facebook.png"></a></li>
+                    <li><a href="#"><img src="./images/main/icon_instar.png"></a></li>
+                    <li><a href="#"><img src="./images/main/icon_twitter.png"></a></li>
+                    <li><a href="#"><img src="./images/main/icon_youtube.png"></a></li>
+                    
+                </ul>
+            </div><!--footer_right--> 
+        </div><!--footer_inner-->
+    </div><!--footer-->
+
+
+
+    <div id="Top_btn">
+      <div class="p_f"><a href="#">
+          <div class="bg">
+              <p>TOP</p>
+              <img src="./images/sub3/bg.png" alt="팔각형" class="bg1"></a>
+          </div>
+      </div>
+      </div>
+
+
+
+
+
+
+ 
+    
+</body>
+</html>

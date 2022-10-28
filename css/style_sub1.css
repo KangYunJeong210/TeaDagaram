@@ -1,0 +1,680 @@
+@charset "utf-8";
+
+@import url(https://fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+
+@font-face {
+    font-family: 'RIDIBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.jejumyeongjo * {
+    font-family: 'Jeju Myeongjo', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Jeju Myeongjo', serif;
+
+}
+
+
+
+img {
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img,
+video,
+iframe {
+    vertical-align: middle;
+}
+
+.box {
+    display: flex;
+    /*이 속성을 가진 박스의 자식들이 정렬한다.*/
+    justify-content: space-between;
+
+}
+
+
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body {
+    font-family: 'Jeju Myeongjo', serif, 'RIDIBatang';
+    min-width:1450px;
+    font-size: 14px;
+}
+
+#header {
+    width: 100%;
+}
+
+
+/*header*/
+
+   #gnb {
+    background-color: rgb(255, 255, 255);
+    height: 100px;
+    position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+
+    
+
+  }
+
+
+.logo{
+    float: left;
+    padding-top: 30px;
+    margin-right: 50px;
+
+}
+
+
+#gnb_inner {
+  width: 1000px;
+  margin: 0 auto;
+  height: 100px;
+  float: left;
+}
+
+#gnb_inner>ul>li {
+  float: left;
+  font-weight: bold;
+  color: rgb(89, 119, 93);
+  font-size: 20px;
+  padding: 40px 32px;
+  font-weight: lighter;
+}
+
+#gnb_inner>ul>li>a:hover{
+  transition: all 0.3s;
+  color: #162416;
+  
+}
+
+
+
+.gnb_margin{
+    width: 1000px;
+    height: 200px;
+    margin: auto
+}
+/*2. sub의 구조를 올바른 위치에 넣어준다.*/
+/*3. sub전체를 포지션 앱솔루트 해서 주메뉴와 구분함과 동시에, 밑에 있는 요소와 겹쳐도 문제없게 한다.*/
+.sub {
+  position: absolute;
+  top: 100%;
+  /*포지션 기준의 높이 바로 밑에 오게함*/
+  left: 50%;
+  transform: translateX(-50%);
+  
+  /*포지션 앱솔루트 때문에, ul이 본래 가지고 있던 한줄 전체를 차지하는 속성이 없어져서 따로 설정함.*/
+}
+
+#gnb_inner>ul>li {
+  position: relative;
+
+  /*sub포지션의 기준*/
+}
+
+
+
+/*4. sub의 모양을 hover 했을때 모양으로 만든다.*/
+.sub>li>a {
+  display: block;
+  padding: 15px 10px;
+  width: 100px;
+  /*글씨가 가운데 들어간 스타일이라 패딩은 아래위로만 준다.*/
+  text-align: center;
+  background-color: rgb(226, 235, 227);
+  /*글씨 굵기, 글씨 크기등 상속되는 속성은 전달이 되어 있으므로, 덮어써서 원하는 모양을 만든다.*/
+  font-size: 16px;
+  font-weight: normal;
+  border-bottom: 1px solid rgb(230, 230, 230);
+  color: rgb(61, 85, 64);
+  z-index: 10;
+}
+
+.sub>li>a:nth-child(3){
+  border-bottom: 10px solid rgb(155, 78, 78);
+}
+
+
+
+
+.sub>li>a:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(70, 90, 78);
+  transition: all 0.4s;
+}
+
+/*5. sub전체가 처음에는 보이지 않게 설정한다.*/
+.sub {
+  display: none;
+}
+
+/*6. gnb_inner>ul>li에 hover하면, .sub가 나타나게 설정한다.*/
+#gnb_inner>ul>li:hover>.sub {
+  display: block;
+}
+
+.R_list{
+    float: right;
+}
+
+.R_list li{
+    float: left;
+    padding: 10px;
+    color: rgb(63, 94, 65);
+}
+
+/*header*/
+
+
+
+
+.Main_background{
+    width: 100%;
+    height: 700px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-image: url(../images/sub1/Main_background.jpg);
+}
+
+
+
+
+
+
+.header_inner {
+    width: 100%;
+    margin: auto;
+    height: 160px;
+    background-color: rgb(160, 160, 160);
+
+}
+
+.Main_text{
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    margin-top: 200px;
+    text-align: center;
+    
+}
+
+.Main_text h1{
+    color: rgb(47, 70, 47);
+    font-size: 22px;
+    
+
+}
+
+.Main_text h4{
+    margin-top: 80px;
+    font-weight: normal;
+    line-height: 26px;
+    color: rgb(48, 59, 53);
+}
+
+.Menu {
+    width: 1320px;
+    height: 100px;
+    margin: auto;
+    opacity: 100%;
+
+}
+
+text {
+    opacity: 100%;
+}
+
+.Menu ul {
+    float: right;
+    margin-right: 130px;
+
+}
+
+.Menu li {
+    float: left;
+    padding-right: 20px;
+    padding-top: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+
+
+.Menu li:hover{
+    color: #c2e6c2;
+    transition: all 0.5s;
+
+}
+
+.Logo {
+    text-align: center;
+    padding-top: 30px;
+
+ 
+}
+
+.Logo img{
+    width: 50px;
+    height: 50px;
+}
+
+
+/*----------------------------------------------------------*/
+
+
+
+
+
+
+
+.Main_banner{
+    width: 1920px;
+    height: 100px;
+    background-color: #365236;
+}
+
+
+/*--------------------------------------------------------------*/
+
+
+/*header*/
+
+
+.Main_banner{
+    width: 100%;
+    height: 700px;
+    margin: auto;
+    text-align: center;
+    padding-top: 400px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    color: #fff;
+    background: url(../images/sub1/Main_background.jpg) no-repeat center top;
+    animation: main 15s linear infinite;}
+
+@keyframes main{
+0%{background:url(../images/sub1/Main_background.jpg) no-repeat center top;}
+20%{background:url(../images/sub1/Main_background.jpg) no-repeat center top;}
+30%{background:url(../images/sub1/Main_background2.jpg) no-repeat center top;}
+45%{background:url(../images/sub1/Main_background2.jpg) no-repeat center top;}
+55%{background:url(../images/sub1/Main_background3.jpg) no-repeat center top;}
+70%{background:url(../images/sub1/Main_background3.jpg) no-repeat center top;}
+80%{background:url(../images/sub1/Main_background4.jpg) no-repeat center top;}
+95%{background:url(../images/sub1/Main_background4.jpg) no-repeat center top;}
+100%{background:url(../images/sub1/Main_background1.jpg) no-repeat center top;}
+}
+
+            
+
+.Main_banner h1{
+    font-weight: lighter;
+    font-size: 28px;
+
+}
+
+.Main_banner h4{
+    font-weight: normal;
+    font-size: 18px;
+    margin-top: 50px;
+    line-height: 28px;
+
+}
+
+
+
+#Story{
+    background-image: url(../images/sub1/story_background.jpg);
+    width: 100%;
+    height: 900px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 200px;
+
+}
+
+#Story h1{
+    font-weight: normal;
+    font-size: 28px;
+    margin-bottom: 100px;
+    padding-top: 120px;
+}
+
+#Story h4{
+    font-weight: lighter;
+    font-size: 18px;
+    padding-bottom: 100px;
+    line-height: 38px;
+}
+
+#Story h5{
+    font-weight: lighter;
+    font-size: 18px;
+    padding-bottom: 100px;
+    line-height: 38px;
+}
+
+#Brand_con{
+    width: 100%;
+    height: 1700px;
+    margin: auto;
+}
+
+.con_inner{
+    width: 1320px;
+    height: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.con_inner h1{
+    font-size: 24px;
+    color: #365236;
+    margin-bottom: 70px;
+    font-weight: normal;
+}
+
+.Dagaram_video p{
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 60px;
+    color: #365236;
+}
+
+.con_inner img{
+    padding: 120px;
+    margin-bottom: 200px;
+}
+
+.Dagaram_video h3{
+    font-size: 24px;
+    color: #3b533b;
+    margin-bottom: 50px;
+    font-weight: normal;
+    padding-top: 150px;
+}
+
+.video_back{
+    width: 100%;
+    height: 1000px;
+    background-image: url(../images/sub1/video_back.png);
+    margin-top: 300px;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+
+}
+
+.Dagaram_video{
+    width: 1320px;
+    height: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+#Make_story{
+    width: 1000px;
+    height: 1400px;
+    background-color: #ffffff;
+    margin: auto;
+}
+
+#Make_story h1{
+    color: #365236;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.Make1{
+    width: 1000px;
+    height: 300px;
+    margin-bottom: 20px;
+    background-image: url(../images/sub1/Make_1.jpg);
+    background-repeat: no-repeat;
+    float: left;
+    background-color: #365236;
+
+}
+
+
+
+
+.Make2{
+    width: 1000px;
+    height: 300px;
+    margin-bottom: 20px;
+    background-image: url(../images/sub1/Make_2.jpg);
+    background-repeat: no-repeat;
+    background-position: 100%;
+    float: left;
+    background-color: #365236;
+}
+
+.Make3{
+    width: 1000px;
+    height: 300px;
+    margin-bottom: 20px;
+    background-image: url(../images/sub1/Make_3.jpg);
+    background-repeat: no-repeat;
+    float: left;
+    background-color: #365236;
+}
+
+.Make1 p{
+    margin-left: 57%;
+    color: #fff;
+    margin-top: 100px;
+    line-height: 24px;
+
+}
+
+
+.Make2 p{
+    margin-left: 5%;
+    color: #fff;
+    margin-top: 100px;
+    line-height: 24px;
+}
+
+
+
+.Make3 p{
+    margin-left: 57%;
+    color: #fff;
+    margin-top: 100px;
+    line-height: 24px;
+}
+
+.Ing{
+    width: 100%;
+    height: 1000px;
+    margin: auto;
+    
+}
+
+.Ing_inner{
+    background-image: url(../images/sub1/Ing_Background.png);
+    height: 1000px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    padding-top: 150px;
+    box-sizing: border-box;
+}
+
+.Ing_inner h1{
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.Ing_inner p{
+    line-height: 24px;
+    font-size: 18px;
+}
+
+.Ing_box{
+    width: 780px;
+    height: 625px;
+    margin: auto;
+    overflow: scroll;
+    
+}
+
+
+.Ing_box{
+    -ms-overflow-style: none;
+    }
+    
+    .Ing_box::-webkit-scrollbar {
+     display: none;
+   }
+   
+   /*특정 부분 스크롤바 없애기*/
+   
+   
+   .Ing_box{
+      -ms-overflow-style: none;
+   }
+   .Ing_box::-webkit-scrollbar{
+     display:none;
+   }
+
+
+.Ing_box img{
+    width: 250px;
+    height: 250px;
+}
+
+.Ing_inner ul{
+    float: left;
+}
+
+
+.Ing_box li:hover img{
+    transform: scale(1.1, 1.1);
+    transition: 0.5s;
+    box-sizing: border-box;
+}
+
+.Ing_inner ul li{
+    float: left;
+    margin: 5px;
+    overflow: hidden;
+}
+
+.Ing_box{
+    margin-top: 120px;
+}
+
+
+/*footer*/
+
+#footer{
+    background-color:rgb(213, 218, 213);
+    color:rgb(23, 82, 45);
+    height: 400px;
+    
+}
+.footer_inner{
+    width:900px;
+    margin:0 auto;
+    padding-top: 100px;
+    box-sizing: border-box;
+    
+}
+.footer_left{
+    float:left;
+}
+.footer_right{
+    float: right;
+}
+
+.footer_left ul li{
+    display: inline-block;
+    padding-right:30px;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+.footer_left ul{
+    padding:20px 0 30px;
+}
+.footer_left p{
+    padding-bottom:30px;
+}
+.footer_right ul li{
+    display: inline-block;
+    padding-left:10px;
+    opacity: 0.5;
+}
+.footer_right ul li:hover{
+    opacity: 1;
+    transition: all 0.5s;
+}
+.footer_right ul{
+    padding-top:20px;
+}
+
+.footer_left p{
+    line-height: 24px;
+}
+
+
+.box111{
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    position: fixed;
+    top: 85%;
+    left: 90%;
+
+}
+
+#Top_btn .bg{position:relative;
+    width:50px;
+    height:50px;}
+    #Top_btn p{position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);}
+    #Top_btn .bg:hover img{transform:rotate(45deg);
+    }
+    #Top_btn .bg img{transition:all 0.5s;}
+    #Top_btn .p_f{position:fixed;
+    right:20px;
+    bottom:50px;}
+

@@ -1,0 +1,725 @@
+@charset "utf-8";
+
+@import url(https://fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+
+@font-face {
+    font-family: 'RIDIBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.jejumyeongjo * {
+    font-family: 'Jeju Myeongjo', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Jeju Myeongjo', serif;
+
+}
+
+
+
+img {
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img,
+video,
+iframe {
+    vertical-align: middle;
+}
+
+.box {
+    display: flex;
+    /*이 속성을 가진 박스의 자식들이 정렬한다.*/
+    justify-content: space-between;
+
+}
+
+
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body {
+    font-family: 'Jeju Myeongjo', serif, 'RIDIBatang';
+    min-width:1450px;
+    font-size: 14px;
+}
+
+#header {
+    width: 100%;
+}
+
+
+/*header*/
+
+   #gnb {
+    background-image: url(../images/sub4/header_back.png);
+    height: 100px;
+    position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+
+    
+
+  }
+
+
+.logo{
+    float: left;
+    padding-top: 30px;
+    margin-right: 50px;
+
+}
+
+
+#gnb_inner {
+  width: 1000px;
+  margin: 0 auto;
+  height: 100px;
+  float: left;
+}
+
+#gnb_inner>ul>li {
+  float: left;
+  font-weight: bold;
+  color: rgb(89, 119, 93);
+  font-size: 20px;
+  padding: 40px 32px;
+  font-weight: lighter;
+}
+
+#gnb_inner>ul>li>a:hover{
+  transition: all 0.3s;
+  color: #162416;
+  
+}
+
+
+
+.gnb_margin{
+    width: 1000px;
+    height: 200px;
+    margin: auto
+}
+/*2. sub의 구조를 올바른 위치에 넣어준다.*/
+/*3. sub전체를 포지션 앱솔루트 해서 주메뉴와 구분함과 동시에, 밑에 있는 요소와 겹쳐도 문제없게 한다.*/
+.sub {
+  position: absolute;
+  top: 100%;
+  /*포지션 기준의 높이 바로 밑에 오게함*/
+  left: 50%;
+  transform: translateX(-50%);
+
+  /*포지션 앱솔루트 때문에, ul이 본래 가지고 있던 한줄 전체를 차지하는 속성이 없어져서 따로 설정함.*/
+}
+
+#gnb_inner>ul>li {
+  position: relative;
+
+  /*sub포지션의 기준*/
+}
+
+
+
+/*4. sub의 모양을 hover 했을때 모양으로 만든다.*/
+.sub>li>a {
+  display: block;
+  padding: 15px 10px;
+  width: 100px;
+  /*글씨가 가운데 들어간 스타일이라 패딩은 아래위로만 준다.*/
+  text-align: center;
+  background-color: rgb(226, 235, 227);
+  /*글씨 굵기, 글씨 크기등 상속되는 속성은 전달이 되어 있으므로, 덮어써서 원하는 모양을 만든다.*/
+  font-size: 16px;
+  font-weight: normal;
+  border-bottom: 1px solid rgb(230, 230, 230);
+  color: rgb(61, 85, 64);
+}
+
+.sub>li>a:nth-child(3){
+  border-bottom: 10px solid rgb(155, 78, 78);
+}
+
+
+
+
+.sub>li>a:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(70, 90, 78);
+  transition: all 0.4s;
+}
+
+/*5. sub전체가 처음에는 보이지 않게 설정한다.*/
+.sub {
+  display: none;
+}
+
+/*6. gnb_inner>ul>li에 hover하면, .sub가 나타나게 설정한다.*/
+#gnb_inner>ul>li:hover>.sub {
+  display: block;
+}
+
+.R_list{
+    float: right;
+}
+
+.R_list li{
+    float: left;
+    padding: 10px;
+    color: rgb(63, 94, 65);
+}
+
+/*header*/
+
+#Main_banner{
+  width: 100%;
+  height: 1100px;
+  margin: auto;
+  margin-top: 150px;
+
+}
+
+
+
+.Main_title{
+  width: 1000px;
+  height: 100px;
+  margin: auto;
+  background-image: url(../images/sub4/Main_btn.png);
+  background-position: 20px;
+  background-repeat: no-repeat;
+  padding: 50px;
+  box-sizing: border-box;
+  
+
+}
+
+#Main_banner h1{
+  font-weight: normal;
+  color:rgb(63, 85, 57);
+  font-size: 22px;
+
+  
+}
+
+.Main_title:hover{
+  transform: translateX(10px);
+  transition: all 0.5s;
+}
+
+
+
+.Main_inner_con{
+  width: 100%;
+  height: 1000px;
+  margin: 100px auto;
+}
+
+.Main_inner1{
+  background-image: url(../images/sub4/Main_inner1.png);
+  width: 951px;
+  height: 300px;
+  background-repeat: no-repeat;
+  float: left;
+}
+
+.Main_inner2{
+  background-image: url(../images/sub4/Main_inner2.png);
+  width: 952px;
+  height: 300px;
+  background-repeat: no-repeat;
+  float: right;
+  margin-top: 150px;
+}
+
+.Main_btn{
+  width: 500px;
+  height: 600px;
+  margin: auto;
+}
+
+.Main_btn a {
+  display: inline-block;
+  padding: 30px 140px;
+  background-color: #3c3c3b;
+  color: #fff;
+  margin: auto;
+  margin-top: 50px;
+  margin-left: 30px;
+
+
+}
+
+.Main_btn a:hover {
+  background-color: rgb(126, 143, 126);
+  color: #ffffff;
+  transition: all 0.5s;
+}
+
+.Main_inner1 p{
+  color: #fff;
+  margin-top: 80px;
+  margin-left: 200px;
+  line-height: 34px;
+  font-size: 20px;
+}
+
+#Notice{
+  width: 100%;
+  height: 650px;
+  background-color: #dee6de;
+
+}
+
+.Notice_inner{
+  width: 1320px;
+  height: 650px;
+  background-color: #dee6de;
+  margin: auto;
+  padding: 30px 100px;
+  box-sizing: border-box;
+}
+
+.Notice_inner h1{
+  font-size: 24px;
+  color: #303d30;
+  font-weight: normal;
+  margin-top: 20px;
+  height: 70px;
+  width: 200px;
+  text-align: center;
+  background-position: -10px;
+  background-repeat: no-repeat;
+  padding-top: 60px;
+  background-image: url(../images/sub4/Notice_title.png);
+  background-position: 20px;
+
+}
+
+
+
+.Notice_inner h1:hover{
+  transform: translateX(10px);
+  transition: all 0.5s;
+  color: #7fbb7f;
+}
+
+
+.Notice_inner ul{
+  padding: 40px 0;
+  font-size: 20px;
+  margin-left: 50px;
+}
+.Notice_inner li{
+  width: 1000px;
+  height: 25px;
+  margin-bottom: 100px;
+  border-bottom: 1px solid rgb(179, 179, 179);
+  color: #303d30;
+}
+.Notice_inner li p:nth-child(1){
+  float: left;
+  margin-right: 630px;
+}
+
+/*공지사항 팝업*/
+
+
+
+
+.popup {
+  position: fixed;
+  top: 100px;
+  left: 200px;
+  padding: 5px;
+  display: none;
+  }
+
+.popup p {
+  text-align: right;
+  font-size: 20px;
+  padding: 5px 5px;
+  background-color: #fff;
+  color: #162416;
+  }
+
+
+
+  /*공지사항 팝업*/
+
+
+#Event{
+  width: 100%;
+  height: 1500px;
+  background-image: url(../images/sub4/Event_back.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  padding: 100px 0;
+}
+.Event_inner{
+  width: 1320px;
+  height: 1200px;
+  margin: auto;
+}
+
+.Event_inner ul{
+  width: 900px;
+  height: 990px;
+  margin: auto;
+  margin-top: 50px;
+}
+.Event_inner ul li{
+  width: 900px;
+  height: 260px;
+  margin-bottom: 100px;
+}
+
+#Event h1{
+  font-size: 24px;
+  color: #303d30;
+  font-weight: normal;
+  margin-top: 20px;
+  height: 70px;
+  width: 300px;
+  text-align: center;
+  background-position: -10px;
+  background-repeat: no-repeat;
+  padding-top: 60px;
+  background-image: url(../images/sub4/Notice_title.png);
+  background-position: 70px;
+
+}
+
+#Event h1:hover{
+  transform: translateX(20px);
+  transition: all 0.5s;
+  color: #7fbb7f;
+}
+
+.Event_inner ul li img{
+  float: left;}
+
+.Event_inner ul li img:hover{
+  transform: translateY(-30px);
+  transition: all 0.5s;
+}
+
+.Event_inner ul li p{
+  float: left;
+  margin-top: 140px;
+  line-height: 24px;
+  font-size: 18px;
+  margin-left: 30px;
+  color: #3d533d;
+  }
+
+  .Event_inner ul li p span{
+    font-size: 22px;
+    line-height: 50px;
+    font-weight: bold;
+    color: #204620;
+  }
+
+
+
+.Event_inner ul li p:hover{
+  color: #101810;
+  transition: all 0.5s;
+  transform: translateX(10px);
+}
+
+.Event_inner ul li span:hover{
+  color: #728372;
+  transition: all 0.8s;
+  font-size: 24px;
+}
+
+
+
+
+.Recipe_title{
+  width: 1100px;
+  height: 80px;
+  margin: auto;
+  background-image: url(../images/sub4/Notice_title.png);
+  background-repeat: no-repeat;
+  padding-top: 30px;
+  padding-right: 50px;
+  box-sizing: border-box;
+ 
+}
+
+.Recipe_title h1{
+  font-size: 28px;
+  color: #303d30;
+  font-weight: normal;
+  padding-left: 50px;
+
+
+}
+
+.Recipe_title:hover{
+  transition: all 0.5s;
+  transform: translateX(10px);
+  color: #7fbb7f;
+}
+
+.Recipe_title h1:hover{
+  transition: all 0.5s;
+  color: #7fbb7f;
+}
+
+
+
+
+
+/*-----------------------------------------*/
+
+#wrapper {
+  width: 800px;
+  height: 600px;
+  margin: 100px auto;
+  background-color: #e0e0e0;
+
+
+
+
+}
+
+
+
+ul.tabs {
+  padding: 0;
+  float: left;
+  list-style: none;
+  height: 100px;
+  /*--Set height of tabs--*/
+  width: 100%;
+}
+
+ul.tabs li {
+  float: left;
+  margin: auto;
+  height: 100px;
+  width: 160px;
+  margin-top: 0px;
+  /*--Subtract 1px from the height of the unordered list--*/
+  /*--Vertically aligns the text within the tab--*/
+  /*--Pull the list item down 1px--*/
+  position: relative;
+  background: #c1cec0;
+  cursor: pointer;
+}
+
+
+
+
+ul.tabs li {
+  text-decoration: none;
+  color: rgb(27, 71, 27);
+  display: block;
+  font-size: 18px;
+  padding: 0 0;
+  font-weight: normal;
+  /*--Gives the bevel look with a 1px white border inside the list item--*/
+  font-family: "나눔고딕";
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+
+
+html ul.tabs li.active,
+html ul.tabs li.active a:hover {
+  /*--Makes sure that the active tab does not listen to the hover properties--*/
+  background: rgb(63, 68, 65);
+  color: #fff;
+  opacity: 1;
+  transition: all 0.5s;
+  /*--Makes the active tab look like it's connected with its content--*/
+
+
+}
+
+
+ul.tabs li:hover{
+  background-color: #4b634b;
+  color: #dcecdc;
+}
+
+/*Tab Conent CSS*/
+.tab_container {
+  border: 1px solid rgb(214, 214, 214);
+  overflow: hidden;
+  clear: both;
+  float: left;
+  width: 800px;
+  height: 600px;
+
+}
+
+
+
+
+.tab_content {
+  padding: 0px;
+  font-size: 1.2em;
+}
+
+/*_________________________________*/
+
+.tab_container {
+  text-align: center;
+  line-height: 40px;
+  font-family: "나눔고딕";
+
+}
+
+.tab_container h1 {
+  font-size: 22px;
+  font-weight: lighter;
+
+}
+
+.tab_container h2 {
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+
+.tab1_box1 {
+  width: 400px;
+  height: 600px;
+  float: left;
+}
+
+.tab1_box2{
+width: 300px;
+height: 600px;
+float: left;
+}
+
+
+.Recipe_text{
+  width: 800px;
+  height: 800px;
+  margin: auto;
+  text-align: center;
+  padding-top: 680px;
+  box-sizing: border-box;
+  font-size: 20px;
+  color: #3d533d;
+  line-height: 28px;
+  margin-bottom: 200px;
+  
+}
+
+#Recipe_back{
+  width: 100%;
+  height: 1400px;
+  background-image: url(../images/sub4/Recipe_back.png);
+  background-repeat: no-repeat;
+  background-position: 50% 45%;
+}
+
+
+/*footer*/
+
+#footer{
+  background-color:rgb(213, 218, 213);
+  color:rgb(23, 82, 45);
+  height: 400px;
+  margin-top: 300px;
+  
+}
+.footer_inner{
+  width:900px;
+  margin:0 auto;
+  padding-top: 100px;
+  box-sizing: border-box;
+  
+}
+.footer_left{
+  float:left;
+}
+.footer_right{
+  float: right;
+}
+
+.footer_left ul li{
+  display: inline-block;
+  padding-right:30px;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+.footer_left ul{
+  padding:20px 0 30px;
+}
+.footer_left p{
+  padding-bottom:30px;
+}
+.footer_right ul li{
+  display: inline-block;
+  padding-left:10px;
+  opacity: 0.5;
+}
+.footer_right ul li:hover{
+  opacity: 1;
+  transition: all 0.5s;
+}
+.footer_right ul{
+  padding-top:20px;
+}
+
+.footer_left p{
+  line-height: 24px;
+}
+
+
+.box111{
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  position: fixed;
+  top: 85%;
+  left: 90%;
+
+}
+
+#Top_btn .bg{position:relative;
+  width:50px;
+  height:50px;}
+  #Top_btn p{position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);}
+  #Top_btn .bg:hover img{transform:rotate(45deg);
+  }
+  #Top_btn .bg img{transition:all 0.5s;}
+  #Top_btn .p_f{position:fixed;
+  right:20px;
+  bottom:50px;}
+
+

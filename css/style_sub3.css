@@ -1,0 +1,698 @@
+@charset "utf-8";
+
+@import url(https://fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+
+@font-face {
+    font-family: 'RIDIBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.jejumyeongjo * {
+    font-family: 'Jeju Myeongjo', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Jeju Myeongjo', serif;
+
+}
+
+
+
+img {
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img,
+video,
+iframe {
+    vertical-align: middle;
+}
+
+.box {
+    display: flex;
+    /*이 속성을 가진 박스의 자식들이 정렬한다.*/
+    justify-content: space-between;
+
+}
+
+
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/*header*/
+
+
+
+
+body {
+    font-family: 'Jeju Myeongjo', serif, 'RIDIBatang';
+    min-width:1450px;
+    font-size: 14px;
+}
+
+ /*1. 자식선택자를 활용해서 주 메뉴 스타일을 꾸며준다.*/
+ #gnb {
+    width: 100%;
+    height: 785px;
+    background-image: url(../images/sub3/Main_banner.png);
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    
+
+
+    
+
+  }
+
+  .logo{
+      float: left;
+      padding-top: 30px;
+      margin-right: 50px;
+      
+
+  }
+
+
+  #gnb_inner {
+    width: 1000px;
+    margin: 0 auto;
+    height: 100px;
+    float: left;
+  }
+
+  #gnb_inner>ul>li {
+    float: left;
+    color: rgb(49, 80, 53);
+    font-size: 20px;
+    padding: 40px 32px;
+    font-weight: lighter;
+  }
+
+  #gnb_inner>ul>li>a:hover{
+    color: #254e25;
+    font-weight: bold;
+
+    
+  }
+
+
+
+  .gnb_margin{
+      width: 1000px;
+      height: 200px;
+      margin: auto
+  }
+  /*2. sub의 구조를 올바른 위치에 넣어준다.*/
+  /*3. sub전체를 포지션 앱솔루트 해서 주메뉴와 구분함과 동시에, 밑에 있는 요소와 겹쳐도 문제없게 한다.*/
+  .sub {
+    position: absolute;
+    top: 100%;
+    /*포지션 기준의 높이 바로 밑에 오게함*/
+    left: 50%;
+    transform: translateX(-50%);
+
+    /*포지션 앱솔루트 때문에, ul이 본래 가지고 있던 한줄 전체를 차지하는 속성이 없어져서 따로 설정함.*/
+  }
+
+  #gnb_inner>ul>li {
+    position: relative;
+
+    /*sub포지션의 기준*/
+  }
+
+
+
+  /*4. sub의 모양을 hover 했을때 모양으로 만든다.*/
+  .sub>li>a {
+    display: block;
+    padding: 15px 10px;
+    width: 100px;
+    /*글씨가 가운데 들어간 스타일이라 패딩은 아래위로만 준다.*/
+    text-align: center;
+    
+    /*글씨 굵기, 글씨 크기등 상속되는 속성은 전달이 되어 있으므로, 덮어써서 원하는 모양을 만든다.*/
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(31, 41, 32);
+  }
+
+
+
+  .sub>li>a:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(70, 90, 78);
+    transition: all 0.4s;
+  }
+
+  /*5. sub전체가 처음에는 보이지 않게 설정한다.*/
+  .sub {
+    display: none;
+  }
+
+  /*6. gnb_inner>ul>li에 hover하면, .sub가 나타나게 설정한다.*/
+  #gnb_inner>ul>li:hover>.sub {
+    display: block;
+  }
+
+  .R_list{
+      float: right;
+  }
+
+  .R_list li{
+      float: left;
+      padding: 10px;
+      color: rgb(55, 88, 65);
+  }
+
+  .R_list li:hover{
+    transform: translateY(3px);
+    color: rgb(32, 85, 48);
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+
+/*header*/
+
+
+
+.banner{position:relative;
+  cursor: pointer;
+  display:inline-block;}
+  .banner img{max-width:100%; 
+  display:block;}
+  .banner span.text{position:absolute;
+    top:50%;
+    left:0;
+    transform:translateY(-50%);
+    display:none;
+    width:100%;
+    font-size: 28px;
+    color:rgb(255, 255, 255);
+    text-align:center;
+    padding-bottom: 110px;}
+
+  .banner::before, .banner::after{
+    content:' ';
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:95%;
+    height:95%;
+    transform:translate(-50%,-50%);
+    transition:all 0.8s;}
+  .banner::before{border-top:2px solid #fff;border-bottom:2px solid #fff;
+  width:0;}
+  .banner::after{border-left:2px solid #fff;border-right:2px solid #fff;
+  height:0;}
+  
+  .banner:hover span.text{display:block;}
+  .banner:hover::before{width:95%;}
+  .banner:hover::after{height:95%;}
+
+.Banner_outer{
+  width: 670px;
+  height: 600px;
+  margin: auto;
+  padding-top: 300px;
+  text-align: center;}
+
+.Banner_text{
+  width: 670px;
+  height: 100px;
+  line-height: 30px;
+  margin-bottom: 50px;
+}
+
+.Banner_text h1{
+  font-size: 24px;
+  color: #2d442d;
+}
+
+.Banner_text p{
+  font-size: 20px;
+  color: #475f47;
+}
+  
+.Main_banner_box{
+  width: 1320px;
+  margin: auto;
+  height: 600px;
+  box-sizing: border-box;
+  padding-top: 100px;
+}
+
+.Banner_box{
+  width: 680px;
+  height: 400px;
+  margin: auto;
+}
+
+
+.Main_banner_box li{
+  float: left;
+  padding: 10px;
+}
+
+.banner:hover{
+  transform: translateY(-10px);
+  transition: all 0.5s;
+}
+
+.Main_banner_text{
+  text-align: center;
+  margin-bottom: 100px;
+  
+}
+
+.Main_banner_text h1{
+  font-weight: normal;
+  font-size: 26px;
+  color: #3a423a;
+  line-height: 30px;
+  line-height: 40px;
+
+}
+
+.Main_banner_text h2{
+  font-weight: lighter;
+  font-size: 18px;
+  color: #4a664a;
+}
+
+#Tea_museum{
+  width: 100%;
+  height: 1650px;
+  background-image: url(../images/sub3/museum_back1.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+
+.museum_inner{
+  width: 1320px;
+  height: 780px;
+  margin: auto;
+  padding-top: 245px;
+  box-sizing: border-box;
+  padding-left: 210px;
+
+
+}
+
+.museum_inner:hover{
+  transform: translateX(-100px);
+  transition: all 0.5s;
+}
+
+.museum_inner2{
+  background-image: url(../images/sub3/museum_back2.jpg);
+  height: 1320px;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  padding-top: 50px;
+  box-sizing: border-box;
+
+}
+
+
+.museum_inner2 h1{
+  font-size: 24px;
+  color: #303d30;
+  font-weight: normal;
+  height: 50px;
+  width: 320px;
+  text-align: center;
+  background-position: 30px;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  background-image: url(../images/sub4/Notice_title.png);
+  background-position: 0px;
+  margin-bottom: 50px;
+  margin-left: 400px;
+
+
+}
+
+.museum_inner2 h1:hover{
+  transform: translateX(20px);
+  transition: all 0.5s;
+  color: #7fbb7f;
+}
+
+.Museum_appli{
+  width: 1000px;
+  height: 500px;
+  margin: auto;
+
+}
+
+.appli_box1{
+  width: 400px;
+  height: 500px;
+  float: left;
+  
+}
+
+.appli_box2{
+  width: 550px;
+  height: 500px;
+  float: right;
+  margin-left: 50px;
+  padding-top: 50px;
+  box-sizing: border-box;
+ 
+}
+.appli_box2 h2{
+font-size: 24px;
+color: #fff;
+font-weight: normal;
+margin-bottom: 30px;
+}
+
+#form{
+  width: 500px;
+  height: 340px;
+  background-color: rgb(255, 255, 255);
+  font-size: 22px;
+  padding: 30px 30px;
+  box-sizing: border-box;
+  line-height: 20px;
+  font-weight: normal;
+}
+
+
+
+input{box-sizing:border-box;
+  border:none;
+  outline-style:none;
+  background:rgb(235, 235, 235);
+  padding:10px;}
+
+
+  table input{width:100%; box-sizing:border-box;}
+			textarea{width:100%;
+				padding:10px;
+				box-sizing:border-box;
+				border:none;
+				background:#eee;
+				outline-style:none;
+				height:100px;}
+
+			table{width:100%;
+      font-size: 20px;
+      color: rgb(13, 46, 20);
+     }
+			table td{width:80%;
+				padding-bottom:5px;
+        }
+			table th{width:30%;
+				text-align:left;
+        font-weight: normal;}
+
+        .submit{width:100%;
+          background:#58705f;
+          color:#fff;
+          border:none;
+          padding:20px;
+          box-sizing:border-box;
+          border-radius:30px;
+          cursor:pointer;
+          margin-top: 14px;
+          font-size: 18px;
+          }
+.Museum_appli p{
+  color: #fff;
+  line-height: 22px;
+
+}
+
+
+
+
+.popup img{
+  width: 430px;
+  height: 150px;
+
+}
+       
+.popup {
+  position: fixed;
+  top: 100px;
+  left: 200px;
+  padding: 5px;
+  display: none;
+  }
+
+.popup p {
+  text-align: right;
+  font-size: 20px;
+  padding: 5px 5px;
+  background-color: #fff;
+  color: #162416;
+  }
+
+
+  .middle_line{
+    width: 100%;
+    height: 400px;
+    margin: auto;
+    background-image: url(../images/sub3/Middle_line_sub4.jpg);
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+  }
+  
+  #Offline{
+    width: 100%;
+    height: 1100px;
+    margin: auto;
+    padding-top: 200px;
+    box-sizing: border-box;
+  
+  }
+
+.Offline_inner{
+  width: 1320px;
+  height: 900px;
+  margin: auto;
+  text-align: center;
+  
+}
+
+.Offline_inner h1{
+  font-size: 24px;
+  color: #2a3f2a;
+  font-weight: normal;
+  margin-bottom: 50px;
+
+}
+
+.Offline_inner p{
+  font-size: 18px;
+  color: #556955;
+  font-weight: lighter;
+  line-height: 30px;
+}
+
+.Offline_map{
+  width: 1120px;
+  height: 600px;
+  margin: auto;
+  margin-top: 80px;
+}
+
+.Off_l li{
+  float: left;
+
+}
+
+.Off_l li:nth-child(2){
+  margin-top: 100px;
+  padding-left: 30px;
+
+
+}
+
+.Off_l li:nth-child(3){
+  margin-top: 300px;
+  padding-left: 30px;
+}
+
+.Offline_1{
+  width: 365px;
+  height: 365px;
+  background-image: url(../images/sub3/Offline_1.png);
+  background-repeat: no-repeat;
+}
+
+.Offline_1:hover{
+  width: 365px;
+  height: 365px;
+  transition: all 0.5s;
+  background-image: url(../images/sub3/Offline_1map.png);
+}
+
+.Offline_2{
+  width: 365px;
+  height: 365px;
+  background-image: url(../images/sub3/Offline_2.png);
+  background-repeat: no-repeat;
+}
+
+.Offline_2:hover{
+  width: 365px;
+  height: 365px;
+  transition: all 0.5s;
+  background-image: url(../images/sub3/Offline_2map.png);
+}
+
+
+
+
+
+
+
+#Coffee_show{
+  width: 100%;
+  height: 1100px;
+  margin: auto;
+  padding-top: 150px;
+  box-sizing: border-box;
+  background-image: url(../images/sub3/Show_back.png);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  margin-top: 200px;
+}
+
+.show_inner{
+  width: 100%;
+  height: 800px;
+  margin: auto;
+  background-image: url(../images/sub3/Cafe_show_line.png);
+  background-position: 50% 70%;
+  background-repeat: no-repeat;
+}
+
+.show_inner h1{
+  text-align: center;
+  font-size: 24px;
+  font-weight: normal;
+  color: #162416;
+}
+
+.Show_pic{
+  width: 1300px;
+  height: 700px;
+  margin: auto;
+  padding-top: 200px;
+}
+
+
+
+.Daily_btn {
+  width: 432px;
+  height: 100px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+
+.Daily_btn a {
+  display: inline-block;
+  padding: 30px 120px;
+  background-color: #3c3c3b;
+  color: #fff;
+
+}
+
+
+.Daily_btn a:hover {
+  background-color: rgb(126, 143, 126);
+  color: #ffffff;
+  transition: all 0.5s;
+}
+
+
+
+/*footer*/
+
+#footer{
+  background-color:rgb(213, 218, 213);
+  color:rgb(23, 82, 45);
+  height: 400px;
+  
+}
+.footer_inner{
+  width:900px;
+  margin:0 auto;
+  padding-top: 100px;
+  box-sizing: border-box;
+  
+}
+.footer_left{
+  float:left;
+}
+.footer_right{
+  float: right;
+}
+
+.footer_left ul li{
+  display: inline-block;
+  padding-right:30px;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+.footer_left ul{
+  padding:20px 0 30px;
+}
+.footer_left p{
+  padding-bottom:30px;
+}
+.footer_right ul li{
+  display: inline-block;
+  padding-left:10px;
+  opacity: 0.5;
+}
+.footer_right ul li:hover{
+  opacity: 1;
+  transition: all 0.5s;
+}
+.footer_right ul{
+  padding-top:20px;
+}
+
+.footer_left p{
+  line-height: 24px;
+}
+
+#Top_btn .bg{position:relative;
+  width:50px;
+  height:50px;}
+  #Top_btn p{position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);}
+  #Top_btn .bg:hover img{transform:rotate(45deg);
+  }
+  #Top_btn .bg img{transition:all 0.5s;}
+  #Top_btn .p_f{position:fixed;
+  right:20px;
+  bottom:50px;}

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1450">
+    <title>다가람</title>
+    <link rel="stylesheet" href="./css/style_sub3.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+         <link rel="shortcut icon" href="./images/main/DAGARAM_logo_only.png">
+
+<!--데일리 다가람-->
+
+        <script src="https://code.jquery.com/jquery-n1.12.4.min.js"
+		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<!--탭 제이쿼리-->
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			//처음들어갔을때 모습 만들기...
+			$(".tab_content").hide(); //tab_content 부분을 모두 숨김.
+			$("ul.tabs li:first").addClass("active").show(); //첫번째 탭이 active클래스를 붙이고, 보여줌.
+			$(".tab_content:first").show(); //tab_contents중 첫번째꺼를 보여줌
+
+			//On Click Event
+			$("ul.tabs li").click(function () {
+
+				$("ul.tabs li").removeClass("active"); //Remove any "active" class
+				$(this).addClass("active"); //선택한 탭에만 active클래스 붙임
+				$(".tab_content").hide(); //모든 contents들 숨김
+
+				var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+				/*.attr( attributeName ) -> 선택한 요소의 속성의 값을 가져옵니다.
+				.find()는 어떤 요소의 하위 요소 중 특정 요소를 찾을 때 사용합니다.*/
+				$(activeTab).fadeIn(); //Fade in the active ID content(active되어있는 칸의 id 값을 가진 부분이 나타남)
+				return false;
+			});
+
+		});
+	</script>
+
+
+<!--공지-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+</script>
+
+<script>
+$(function () {
+  $(".coupon").click(function () {
+    $(".popup").fadeIn();
+  });
+  $(".popup p a").click(function () {
+    $(".popup").fadeOut();
+  });
+});
+</script>
+<!--공지-->
+
+
+
+
+
+
+</head>
+
+
+<body>
+
+  <div id="gnb">
+    <!--배경색-->
+    <div class="gnb_margin">
+    <div id="gnb_inner">
+        <div class="right_list">
+            <ul class="R_list">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+
+        </div><!--right_list-->
+
+        <div class="logo">
+          <a href="index.html">
+            <img src="./images/sub3/Dagaram_Logo.png" alt=""></a>
+        </div>
+      <!--마진오토-->
+      <ul id="Header_list" class="clearfix">
+        <li>
+          <a href="sub2.html"> 제품 </a>
+          <ul class="sub">
+            <li><a href="./sub2.html#Pro_container">차</a></li>
+            <li><a href="./sub2.html#goods">굿즈</a></li>
+            <li><a href="./sub2.html#Daily_dagaram">데일리 다가람</a></li>
+          </ul>
+        </li>
+
+        <li><a href="sub1.html">브랜드</a>
+            <ul class="sub">
+                <li><a href="sub1.html#Story">다가람 이야기</a></li>
+                <li><a href="sub1.html#Brand_con">브랜드 콘셉트</a></li>
+                <li><a href="sub1.html#Make_story">만드는 이야기</a></li>
+              </ul></li>
+
+        <li><a href="sub3.html">매장</a>
+          <ul class="sub">
+            <li><a href="sub3.html#Tea_museum">티뮤지엄</a></li>
+            <li><a href="sub3.html#Offline">카페 다가람</a></li>
+            <li><a href="sub3.html#Coffee_show">카페쇼</a></li>
+          </ul>
+        </li>
+
+        <li><a href="sub4.html">커뮤니티</a>
+            <ul class="sub">
+                <li><a href="sub4.html#Notice">공지사항</a></li>
+                <li><a href="sub4.html# Event">이벤트</a></li>
+                <li><a href="sub4.html#Recipe_back">레시피</a></li>
+              </ul></li>
+
+      </ul>
+    </div>
+    <!--gnb_inner-->
+
+
+
+
+    <div class="Banner_outer">
+      <div class="Banner_text">
+        <h1>다가람에 직접 방문해 보세요.</h1>
+        <p>Go to Dagaram</p>
+        </div><!--Banner_text-->
+        <div class="banner"><a href="sub3.html#Tea_museum">
+            <img src="./images/sub3/Main_banner_btn1.png" alt="이미지">
+            <span class="text">티뮤지엄</span></a>
+          </div>
+
+          <div class="banner"><a href="sub3.html#Offline">
+            <img src="./images/sub3/Main_banner_btn2.png" alt="이미지">
+            <span class="text">카페</span></a>
+          </div>
+
+          <div class="banner"><a href="sub3.html#Coffee_show">
+            <img src="./images/sub3/Main_banner_btn3.png" alt="이미지">
+            <span class="text">카페쇼</span></a>
+          </div>
+
+          </div><!--Banner_outer-->
+        </div><!--gnb_margin-->
+      </div>
+            <!--gnb-->
+
+
+
+      <div id="Tea_museum">
+
+        <div class="museum_inner">
+          <img src="./images/sub3/Tea_museum_1.jpg" alt="">
+        </div><!--museum_inner-->
+
+        <div class="museum_inner2">
+
+          <h1>티뮤지엄 방문 예약하기</h1> 
+            <div class="Museum_appli">
+              <div class="appli_box1">
+                <img src="./images/sub3/museum_box.png" alt="">
+              </div><!--appli_box1-->
+
+              <div class="appli_box2">
+                <h2>예약폼 작성</h2>
+              
+              <div id="form">
+                <table>
+                  <tr>
+                    <th><label for="name">이 름</label></th>
+                    <td><div><input type="text" id="name" placeholder="NAME"></div></td>
+                  </tr>
+                  <tr>
+                    <th><label for="pass">비번</label></th>
+                    <td><input type="password" id="pass" maxlength="8" placeholder="PASSWORD"></td>
+                  </tr>
+                  <tr>
+                    <th><label for="phone">연락처</label></th>
+                    <td><input type="numb" id="phone" placeholder="'-'는 빼고 입력해주세요"></td>
+                  </tr>
+                  <tr>
+                    <th><label for="date">희망일자</label></th>
+                    <td><input type="date" id="date"></td>
+                  </tr>
+                  <tr>
+                    <th><label for="date">인원수</label></th>
+                    <td>
+                      <input type="number" min="1" value="1">
+                    </td>
+                  </tr>
+                  
+                </table>
+
+                
+                <div class="coupon"><input type="submit" value="보내기" class="submit">
+                </div>
+              </div><!--form-->
+            </div><!--appli_box2-->
+              <p>*예약 시 유의사항<br>
+                12세 미만의 어린이는 보호자 동반 체험이 필수 입니다.
+                당일 보호자가 없을 시, 부득이하게 체험 예약이 취소될 수 있습니다.<br>
+                당일 취소는 환불이 불가능합니다.</p>
+            </div><!--Museum_appli-->  
+        </div><!--museum_inner2-->
+      </div><!--Tea_museum-->
+
+      <div class="popup">
+        <img src="./images/sub3/appli.png" alt="팝업이미지">
+        <p><a href="./sub3.html#form">Close</a></p>
+       </div>
+
+
+
+      <div class="middle_line">
+        
+      </div><!--middle_line-->
+
+      <div id="Offline">
+        <div class="Offline_inner">
+          <h1>매장</h1>
+          <p>다양한 차와 다과를 <br>
+            고즈넉한 분위기의 다가람 카페에서 즐겨보세요 <br>
+            따뜻한 차와 어울리는 음악과 책을 자유롭게 이용하세요.</p>
+
+            <div class="Offline_map">
+              <ul class="Off_l">
+                <li><a href="https://goo.gl/maps/AaTcrusW5bLD6tTm7"><div class="Offline_1"></div></a></li>
+                <li><img src="./images/sub3/Korea.png" alt=""></li>
+                <li><a href="https://goo.gl/maps/dCitmDsUJ121GrYw6"><div class="Offline_2"></div></a></li>
+              </ul>
+            </div><!--Offline_map-->
+        </div><!--Offline_inner-->
+      </div><!--Offline-->
+
+
+
+
+      <div id="Coffee_show">
+          <div class="show_inner">
+            <h1>카페쇼</h1>
+            <div class="Show_pic">
+            <img src="./images/sub3/Cafe_show.png" alt="">
+          </div>
+        </div><!--show_inner-->
+
+        <div class="Daily_btn"> <!--Daily_btn-->
+                    
+          <a href="http://www.cafeshow.com/kor/main.asp">
+              카페쇼 홈페이지 보러가기
+          </a>
+          </div> <!--Daily_btn-->
+            
+      </div><!--Coffee_show-->
+
+
+      
+  <div id="footer">
+    <!--배경색-->
+        <div class="footer_inner clearfix">
+        <!--마진오토-->
+            <div class="footer_left">
+                <img src="./images/main/Dagaram_logo_sub_green.png" alt="">
+                <ul>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보취급방침</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">문의하기</a></li>
+                    <li><a href="#">맴버십카드등록</a></li>
+                </ul>
+                <p>
+                    부산광역시 중앙동 중앙대로 다원빌딩 10층 (주)다가람 / 대표전화 : 080-022-0085<br>
+                    사업자등록번호 : 315-81-08930 / 대표자 : 강윤정 <br>
+                    COPYRIGHT ⓒ PULMUONE. All RIGHT RESERVED.
+                </p>
+            </div><!--footer_left-->
+            <div class="footer_right">
+                <ul>
+                    <li><a href="#"><img src="./images/main/icon_facebook.png"></a></li>
+                    <li><a href="#"><img src="./images/main/icon_instar.png"></a></li>
+                    <li><a href="#"><img src="./images/main/icon_twitter.png"></a></li>
+                    <li><a href="#"><img src="./images/main/icon_youtube.png"></a></li>
+                    
+                </ul>
+            </div><!--footer_right--> 
+        </div><!--footer_inner-->
+    </div><!--footer-->
+
+    <div id="Top_btn">
+      <div class="p_f"><a href="#">
+          <div class="bg">
+              <p>TOP</p>
+              <img src="./images/sub3/bg.png" alt="팔각형" class="bg1"></a>
+          </div>
+      </div>
+      </div>
+
+
+
+
+</body>
+</html>
