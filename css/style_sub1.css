@@ -385,8 +385,9 @@ text {
 
 #Brand_con{
     width: 100%;
-    height: 1700px;
+    height: 500px;
     margin: auto;
+    background-color: rgb(255, 255, 255);
 }
 
 .con_inner{
@@ -403,42 +404,11 @@ text {
     font-weight: normal;
 }
 
-.Dagaram_video p{
-    font-size: 20px;
-    line-height: 30px;
-    margin-top: 60px;
-    color: #365236;
-}
-
 .con_inner img{
     padding: 120px;
     margin-bottom: 200px;
 }
 
-.Dagaram_video h3{
-    font-size: 24px;
-    color: #3b533b;
-    margin-bottom: 50px;
-    font-weight: normal;
-    padding-top: 150px;
-}
-
-.video_back{
-    width: 100%;
-    height: 1000px;
-    background-image: url(../images/sub1/video_back.png);
-    margin-top: 300px;
-    background-position: 50% 0;
-    background-repeat: no-repeat;
-
-}
-
-.Dagaram_video{
-    width: 1320px;
-    height: 600px;
-    margin: auto;
-    text-align: center;
-}
 
 #Make_story{
     width: 1000px;
